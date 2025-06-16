@@ -55,4 +55,3 @@ The backend (Django) project is available in a separate repository:
 <p align="center">
   <img src="assets/image_readme/h1.png" width="50%" />
 </p>
-# travelsApp
