@@ -5,6 +5,7 @@ import 'package:travelapp2/view/screan/Myreservations.dart';
 import 'package:travelapp2/view/screan/addtravelers.dart';
 import 'package:travelapp2/view/screan/auth/login.dart';
 import 'package:travelapp2/view/screan/auth/signup.dart';
+import 'package:travelapp2/view/screan/auth/verifycode.dart';
 import 'package:travelapp2/view/screan/homescrean.dart';
 import 'package:travelapp2/view/screan/notifications.dart';
 import 'package:travelapp2/view/screan/pageReservation.dart';
@@ -28,6 +29,8 @@ class Routes {
 
   static const String Login = "/login";
   static const String SignUp = "/signup";
+    static const String VerifyCode = '/verifycode';
+
 }
 
 List<GetPage<dynamic>>? routeapp = [
@@ -52,5 +55,7 @@ List<GetPage<dynamic>>? routeapp = [
   GetPage(name: Routes.Login, page: () => LoginPage()),
   GetPage(name: Routes.SignUp, page: () => SignUpPage()),
   GetPage(name: Routes.SendNotification, page: ()=>Sendnotification()),
-  GetPage(name: Routes.Notification, page: ()=>Notifications())
+  GetPage(name: Routes.Notification, page: ()=>Notifications()),
+    GetPage(name: Routes.VerifyCode, page: () => const VerifyCodePage()),
+
 ];

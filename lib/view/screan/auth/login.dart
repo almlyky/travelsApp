@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travelapp2/controller/auth/logincontoller.dart';
+import 'package:travelapp2/core/constant/routes.dart';
 import 'package:travelapp2/core/my_function/validinput.dart';
 import 'package:travelapp2/view/widgets/shared/customTextfield.dart';
 
@@ -61,7 +62,9 @@ class LoginPage extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.VerifyCode);
+                      },
                       child: Text(
                         "هل نسيت كلمة السر؟",
                         style: Theme.of(context).textTheme.headlineMedium,

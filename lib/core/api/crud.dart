@@ -3,12 +3,9 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:get/get.dart';
 import 'package:travelapp2/core/my-class/statusrequest.dart';
-// import 'package:eccommerce_new/core/my_function/checkinternet.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
-import 'package:travelapp2/core/serveces.dart';
 
 class Crud {
   Future<Either<StatusRequest, Map<String, dynamic>>> postrequst(

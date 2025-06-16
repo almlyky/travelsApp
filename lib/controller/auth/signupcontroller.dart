@@ -20,6 +20,10 @@ class Signupcontroller extends GetxController {
     Get.offNamed(Routes.Login);
   }
 
+  goToverifycode() {
+    Get.toNamed(Routes.VerifyCode);
+  }
+
   signUp() async {
     FormState? formdata = formstate.currentState;
     if (formdata!.validate()) {
@@ -34,7 +38,7 @@ class Signupcontroller extends GetxController {
       var response = await controldata.addData(apiAppSignUp, data);
       statusRequest = handlingData(response);
       if (statusRequest == StatusRequest.success) {
-        goToLogin();
+        goToverifycode();
       }
       update();
     }

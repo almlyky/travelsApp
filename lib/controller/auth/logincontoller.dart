@@ -110,7 +110,7 @@ class Logincontoller extends GetxController {
           apiAppLogin, {"username": username.text, "password": passowrd.text});
       statusRequestlogin = handlingData(response);
       if (StatusRequest.success == statusRequestlogin &&
-          response.containsKey("access")) {
+          response.containsKey("access") ) {
         // print(response['access']);
         // controllersetting.shared.setString("accessToken", response['access']);
         // print(controllersetting.shared.getString("accessToken"));
@@ -118,7 +118,7 @@ class Logincontoller extends GetxController {
         var res = await controldata.getDataAuthentecation(
             apiAppGetUser, response['access']);
         statusRequestUser = handlingData(res);
-        if (statusRequestUser == StatusRequest.success) {
+        if (statusRequestUser == StatusRequest.success && res['is_active'] == true) {
           controllersetting.shared.setString("rule", "user");
           controllersetting.shared.setString("username", username.text);
           controllersetting.shared.setInt("userId", res['pk']);
